@@ -1,0 +1,16 @@
+ {
+   "name": "moodify",
+   "private": true,
+   "version": "1.0.0",
+   "description": "Mood-based Spotify track recommendations",
+   "scripts": {
+     "install": "cd server && npm i && cd ../client && npm i",
+     "build": "cd client && npm run build",
+     "start": "cd server && npm start",
+     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
+   },
+   "devDependencies": {
+     "concurrently": "^9.0.1"
+   }
+ }
+

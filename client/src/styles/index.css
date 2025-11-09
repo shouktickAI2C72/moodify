@@ -1,0 +1,25 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ html, body, #root {
+   height: 100%;
+ }
+
+ /* Glass card */
+ .glass-card {
+   @apply bg-white/10 border border-white/10 rounded-2xl backdrop-blur-md shadow-2xl;
+ }
+
+ /* Shimmer placeholder */
+ .shimmer {
+   background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.18) 37%, rgba(255,255,255,0.06) 63%);
+   background-size: 400% 100%;
+   animation: shimmer 1.4s ease infinite;
+ }
+
+ @keyframes shimmer {
+   0% { background-position: 100% 0; }
+   100% { background-position: -100% 0; }
+ }
+
