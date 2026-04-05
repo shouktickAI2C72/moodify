@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: moodify
+    env: node
+    repo: https://github.com/shouktickAI2C72/moodify
+    branch: main
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: SPOTIFY_CLIENT_ID
+        # Set value in Render dashboard or via API; leave blank here for security
+        value: ""
+      - key: SPOTIFY_CLIENT_SECRET
+        value: ""
